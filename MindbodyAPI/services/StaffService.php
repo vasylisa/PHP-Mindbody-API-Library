@@ -51,7 +51,7 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 		'GetStaffImgURLRequest' => 'MindbodyAPI\structures\GetStaffImgURLRequest',
 		'GetStaffImgURLResponse' => 'MindbodyAPI\structures\GetStaffImgURLResponse',
 		'GetStaffImgURLResult' => 'MindbodyAPI\structures\GetStaffImgURLResult',
-        'ValidateStaffLogin' => 'MindbodyAPI\structures\ValidateStaffLoginRequest',
+        'ValidateStaffLogin' => 'MindbodyAPI\structures\ValidateStaffLogin',
         'ValidateStaffLoginRequest' => 'MindbodyAPI\structures\ValidateStaffLoginRequest',
         'ValidateStaffLoginResponse' => 'MindbodyAPI\structures\ValidateStaffLoginResponse',
         'ValidateStaffLoginResult' => 'MindbodyAPI\structures\ValidateStaffLoginResult',
