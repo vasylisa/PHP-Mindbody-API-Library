@@ -51,6 +51,10 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 		'GetStaffImgURLRequest' => 'MindbodyAPI\structures\GetStaffImgURLRequest',
 		'GetStaffImgURLResponse' => 'MindbodyAPI\structures\GetStaffImgURLResponse',
 		'GetStaffImgURLResult' => 'MindbodyAPI\structures\GetStaffImgURLResult',
+        'ValidateStaffLogin' => 'MindbodyAPI\structures\ValidateStaffLoginRequest',
+        'ValidateStaffLoginRequest' => 'MindbodyAPI\structures\ValidateStaffLoginRequest',
+        'ValidateStaffLoginResponse' => 'MindbodyAPI\structures\ValidateStaffLoginResponse',
+        'ValidateStaffLoginResult' => 'MindbodyAPI\structures\ValidateStaffLoginResult',
 	);
 	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -112,6 +116,20 @@ class StaffService extends \MindbodyAPI\MindbodyClient {
 	 */
 	public function GetStaffImgURL(structures\GetStaffImgURL $parameters) {
 		return $this->__soapCall('GetStaffImgURL', array(
+			$parameters
+		) , array(
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'soapaction' => ''
+		));
+	}
+	/**
+	 * Validate staff login.
+	 *
+	 * @param ValidateStaffLogin $parameters
+	 * @return ValidateStaffLoginResponse
+	 */
+	public function ValidateStaffLogin(structures\ValidateStaffLogin $parameters) {
+		return $this->__soapCall('ValidateStaffLogin', array(
 			$parameters
 		) , array(
 			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
