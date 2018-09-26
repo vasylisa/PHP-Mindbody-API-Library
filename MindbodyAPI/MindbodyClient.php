@@ -44,6 +44,15 @@ class MindbodyClient extends \SoapClient {
 		
 		return $credentials;
 	}
+
+	public static function staffCredentials($username, $password, Array $siteids = null) {
+		$credentials = new structures\StaffCredentials;
+		$credentials->Username = $username;
+		$credentials->Password = $password;
+		$credentials->SiteIDs = $siteids;
+
+		return $credentials;
+	}
 	
 	public static function structure($type, $propMap = null) {
 		if($propMap && !(is_array($propMap) || is_object($propMap)))
