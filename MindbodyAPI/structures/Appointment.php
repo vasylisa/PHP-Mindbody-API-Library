@@ -18,6 +18,6 @@ class Appointment {
 	public $FirstAppointment; // boolean
 	public $ClientService; // ClientService
 	public $Resources; // ArrayOfResource
-	
+	public $Execute; // string
 }
 ?>
