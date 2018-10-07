@@ -10,6 +10,7 @@ class Service {
 	public $ID; // string
 	public $Name; // string
 	public $Count; // int
-	
+	public $ProgramID; // int
+
 }
 ?>
