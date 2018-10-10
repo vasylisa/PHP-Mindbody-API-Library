@@ -23,6 +23,7 @@ class Staff {
 	public $LastName; // string
 	public $ImageURL; // string
 	public $Bio; // string
-
+    public $isMale = false; // bool
+    
 }
 ?>
