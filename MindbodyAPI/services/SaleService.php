@@ -100,6 +100,10 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 		'GetCustomPaymentMethodsRequest' => 'MindbodyAPI\structures\GetCustomPaymentMethodsRequest',
 		'GetCustomPaymentMethodsResponse' => 'MindbodyAPI\structures\GetCustomPaymentMethodsResponse',
 		'GetCustomPaymentMethodsResult' => 'MindbodyAPI\structures\GetCustomPaymentMethodsResult',
+        'GetContracts' => 'MindbodyAPI\structures\GetContracts',
+        'GetContractsRequest' => 'MindbodyAPI\structures\GetContractsRequest',
+        'GetContractsResponse' => 'MindbodyAPI\structures\GetContractsResponse',
+        'GetContractsResult' => 'MindbodyAPI\structures\GetContractsResult',
 	);
 	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5_1/SaleService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
