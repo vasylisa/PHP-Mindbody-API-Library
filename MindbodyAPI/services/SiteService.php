@@ -57,14 +57,14 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		'Row' => 'MindbodyAPI\structures\Row',
 		'RecordSet' => 'MindbodyAPI\structures\RecordSet',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5_1/SiteService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
 		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/SiteService.asmx';
+		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5_1/SiteService.asmx';
 		parent::__construct($wsdl, $options);
 	}
 	/**
@@ -77,7 +77,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetSites', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -91,7 +91,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetLocations', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -105,7 +105,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetActivationCode', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -119,7 +119,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetPrograms', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -133,7 +133,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetSessionTypes', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -147,7 +147,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetResources', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -161,7 +161,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetRelationships', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -175,7 +175,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetResourceSchedule', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -189,7 +189,7 @@ class SiteService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('ReserveResource', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}

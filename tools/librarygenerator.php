@@ -64,14 +64,14 @@ if(!is_includeable("wsdl2php.php")) die("wsdl2php is required for this script to
 if(!ini_get('user_agent')) die("This script requires that your user_agent ini setting be configured. This is due to Mindbody blocking all requests from clients not providing a user_agent header.\nAn example would be: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19'\n");
 
 $services = array(
-	"https://api.mindbodyonline.com/0_5/AppointmentService.asmx?WSDL",
-	"https://api.mindbodyonline.com/0_5/ClassService.asmx?WSDL",
-	"https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL",
-	"https://api.mindbodyonline.com/0_5/SiteService.asmx?WSDL",
-	"https://api.mindbodyonline.com/0_5/SaleService.asmx?WSDL",
-	"https://api.mindbodyonline.com/0_5/StaffService.asmx?WSDL",
-	"https://api.mindbodyonline.com/0_5/DataService.asmx?WSDL",
-	"https://api.mindbodyonline.com/0_5/FinderService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5_1/AppointmentService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5_1/ClassService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5_1/ClientService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5_1/SiteService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5_1/SaleService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5_1/StaffService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5_1/DataService.asmx?WSDL",
+	"https://api.mindbodyonline.com/0_5_1/FinderService.asmx?WSDL",
 );
 
 if(!is_dir("wsdl2phpoutput")) {
@@ -115,7 +115,7 @@ include_once("MindbodyAPI/MindbodyClient.php");
 foreach(array_merge(glob("splitteroutput/*_x0020_*.php"), array("splitteroutput/DataService.php")) as $serviceFile) {
 	$oldServiceName = basename($serviceFile, ".php");
 	$serviceName = str_replace("_x0020_", "", $oldServiceName);
-	$endpoint = 'https://api.mindbodyonline.com/0_5/' . $serviceName . '.asmx';
+	$endpoint = 'https://api.mindbodyonline.com/0_5_1/' . $serviceName . '.asmx';
 	$file = file_get_contents($serviceFile);
 	$constructorcode = <<<EOD
 if(!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');

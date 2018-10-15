@@ -140,14 +140,14 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		'SendUserNewPasswordResponse' => 'MindbodyAPI\structures\SendUserNewPasswordResponse',
 		'ClientSendUserNewPasswordResult' => 'MindbodyAPI\structures\ClientSendUserNewPasswordResult',
 	);
-	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5/ClientService.asmx?WSDL", $options = array()) {
+	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5_1/ClientService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
 			if (!isset($options['classmap'][$key])) {
 				$options['classmap'][$key] = $value;
 			}
 		}
 		if (!ini_get('user_agent')) ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.6; en-US; rv:1.9.2.19) Gecko/20110707 Firefox/3.6.19');
-		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5/ClientService.asmx';
+		if (!isset($options['location'])) $options['location'] = 'https://api.mindbodyonline.com/0_5_1/ClientService.asmx';
 		parent::__construct($wsdl, $options);
 	}
 	/**
@@ -160,7 +160,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('AddArrival', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -174,7 +174,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('AddOrUpdateClients', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -188,7 +188,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClients', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -202,7 +202,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetCustomClientFields', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -216,7 +216,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientIndexes', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -230,7 +230,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientContactLogs', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -244,7 +244,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('AddOrUpdateContactLogs', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -258,7 +258,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetContactLogTypes', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -272,7 +272,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('UploadClientDocument', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -286,7 +286,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientFormulaNotes', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -300,7 +300,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('AddClientFormulaNote', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -314,7 +314,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('DeleteClientFormulaNote', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -328,7 +328,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientReferralTypes', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -342,7 +342,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetActiveClientMemberships', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -356,7 +356,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientContracts', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -370,7 +370,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientAccountBalances', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -384,7 +384,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientServices', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -398,7 +398,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientVisits', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -412,7 +412,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientPurchases', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -426,7 +426,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetClientSchedule', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -440,7 +440,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('GetRequiredClientFields', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -455,7 +455,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('ValidateLogin', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -469,7 +469,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('UpdateClientServices', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
@@ -483,7 +483,7 @@ class ClientService extends \MindbodyAPI\MindbodyClient {
 		return $this->__soapCall('SendUserNewPassword', array(
 			$parameters
 		) , array(
-			'uri' => 'http://clients.mindbodyonline.com/api/0_5',
+			'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
 			'soapaction' => ''
 		));
 	}
