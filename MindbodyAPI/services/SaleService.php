@@ -104,6 +104,7 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
         'GetContractsRequest' => 'MindbodyAPI\structures\GetContractsRequest',
         'GetContractsResponse' => 'MindbodyAPI\structures\GetContractsResponse',
         'GetContractsResult' => 'MindbodyAPI\structures\GetContractsResult',
+        'Contract' => 'MindbodyAPI\structures\Contract',
 	);
 	public function __construct($wsdl = "https://api.mindbodyonline.com/0_5_1/SaleService.asmx?WSDL", $options = array()) {
 		foreach (self::$classmap as $key => $value) {
@@ -157,6 +158,20 @@ class SaleService extends \MindbodyAPI\MindbodyClient {
 			'soapaction' => ''
 		));
 	}
+    /**
+     * Gets a list of contracts.
+     *
+     * @param GetContracts $parameters
+     * @return GetContractsResponse
+     */
+    public function GetContracts(structures\GetContracts $parameters) {
+        return $this->__soapCall('GetContracts', array(
+            $parameters
+        ) , array(
+            'uri' => 'http://clients.mindbodyonline.com/api/0_5_1',
+            'soapaction' => ''
+        ));
+    }
 	/**
 	 * Gets a list of services available for sale.
 	 *
